@@ -18,6 +18,9 @@ body {
 img {
   width: 100%;
 }
+li{
+  list-style: none;
+}
 .container {
   width: 70%;
   margin: 0 auto;
@@ -348,4 +351,111 @@ margin: 10px auto;
   border-radius: 20px;
 
 
+}
+
+.footer {
+  background-image:   linear-gradient(#0009, #0009), url(https://alfaroukroute.github.io/Mealify/assets/img/textured-metal-background.jpg);
+  /* background-position: center; */
+  background-size: contain;
+  color: white;
+  padding: var(--section-padding);
+}
+.footer .footer-content{
+  /* background-color: tomato; */
+  display: flex;
+justify-content: space-between;
+
+}
+.footer .part {
+  width: 20%;
+ 
+}
+.footer .part2{
+  width: 50%;
+
+}
+
+.footer .footer-mealify .footer-media-text{
+  display: flex;
+  align-items: center;
+}
+.footer .footer-mealify .footer-media-text img{
+  width: 60px;
+  margin-right: 20px;
+}
+.footer .footer-mealify p{
+  margin: 20px 0;
+}
+.footer .footer-mealify .footer-brands{
+  text-align: center;
+}
+.footer .footer-mealify .footer-brands h3{
+  border-bottom: 2px solid var(--main-light-bg);
+  padding: 10px;
+}
+.footer .footer-brands .brands-icons{
+  display: flex;
+  justify-content: space-around;
+margin: 20px 0 ;
+font-size: 28px;
+}
+
+
+.footer .footer-subscribe p{
+  margin :20px 0;
+}
+.footer .footer-inputs{
+  display: flex;
+justify-content: space-between;
+}
+.footer .footer-inputs input{
+  width: 79%;
+  padding: 10px;
+}
+.footer .footer-inputs button{
+  width: 20%;
+  border: 0;
+  background-color: var(--color-primary);
+  color: white;
+
+}
+.footer .footer-inputs i{
+  margin: 5px;
+}
+.footer .footer-subscribe h3{
+  margin: 20px 0 ;
+}
+.footer .footer-subscribe .links{
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-subscribe .links ul {
+  width: 50%;
+
+}
+.footer .footer-subscribe .links ul li {
+ 
+  padding: 5px;
+  margin: 5px 0;
+  transition: all 0.5s;
+}
+.footer .footer-subscribe .links ul li:hover{
+   background-color: rgba(54, 51, 51, 0.5);
+  margin-left: 10px;
+  }
+.footer .footer-subscribe .links ul li i {
+margin-right:10px ;
+}
+
+
+.footer .get-in-toch ul li{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  
+}
+.footer .get-in-toch ul li i {
+  font-size: 24px;
+  color: var(--color-primary);
+  margin-right: 10px;
 }
