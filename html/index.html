@@ -12,8 +12,9 @@
     <title>Mealify | Yahia Elkosh</title>
     <!-- <title>Fokir - Personal Portfolio Bootstrap Template</title> -->
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/all.min.css" />
-    <link rel="icon" href="../img/favicon.png">
+    <link rel="icon" href="../img/favicon.png" />
   </head>
   <body>
     <!-- ******************** Nav  Section *****************************************-->
@@ -24,35 +25,40 @@
           <div class="logo">
             <h2>Mealify</h2>
           </div>
-
+   <i class="fa-solid fa-bars"></i>
           <ul>
             <li>
               <a href="#home">Home</a>
-              <div class="line"></div>
+              <div class="line home-line"></div>
             </li>
             <li>
-              <a href="#chefs">Chefs</a>
-              <div class="line"></div>
+              <a   href="#chefs">Chefs</a>
+              <div class="line chefs-line"></div>
             </li>
             <li>
-              <a href="#gallery">Gallery</a>
-              <div class="line"></div>
+              <a  href="#gallery">Gallery</a>
+              <div class="line gallery-line"></div>
             </li>
             <li>
-              <a href="#contact">Contact</a>
-              <div class="line"></div>
+              <a  href="#contact">Contact</a>
+              <div class=" line contact-line"></div>
             </li>
+          
           </ul>
+       
 
-          <div class="dark-mood">
-            <i class="fa-solid fa-moon"></i>
+          <div class="dark-mode">
+            <label for="dark-mode">
+              <input type="checkbox" id="dark-mode" />
+              <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i
+            ></label>
           </div>
         </div>
       </div>
     </div>
     <!-- ******************** Home Section *****************************************-->
 
-    <div class="home" id="home">
+    <div class="home section" id="home">
       <div class="container">
         <div class="home-content">
           <div class="home-text">
@@ -64,7 +70,10 @@
 
             <div class="btns-group">
               <a class="table-button" href="">Book a Table</a>
-              <a class="vid-button" href=""
+              <a
+                class="vid-button"
+                target="_blank"
+                href="https://www.youtube.com/"
                 ><div class="icon"><i class="fa-solid fa-play"></i></div>
                 Watch a Video</a
               >
@@ -79,7 +88,7 @@
     </div>
     <!-- ******************** Chefs Section *****************************************-->
 
-    <div class="chefs" id="chefs">
+    <div class="chefs " id="chefs">
       <div class="container">
         <div class="sections-header">
           <h3>Chefs</h3>
@@ -153,7 +162,7 @@
     </div>
     <!-- ******************** Gallery Section *****************************************-->
 
-    <div class="gallery" id="gallery">
+    <div class="gallery " id="gallery">
       <div class="container">
         <div class="sections-header">
           <h3>GALLERY</h3>
@@ -223,7 +232,7 @@
     </div>
     <!-- ******************** Contact Section *****************************************-->
 
-    <div class="contact" id="contact">
+    <div class="contact " id="contact">
       <div class="container">
         <div class="sections-header">
           <h3>CONTACT</h3>
@@ -282,10 +291,9 @@
       </div>
     </div>
     <!-- ******************** Footer Section *****************************************-->
-    <div class="footer">
+    <div class="footer ">
       <div class="container">
         <div class="footer-content">
-
           <div class="part footer-mealify">
             <div class="footer-media-text">
               <img src="../img/favicon.png" alt="" />
@@ -342,13 +350,10 @@
                 <i class="fa-solid fa-location-dot"></i>A108 Adam Street, New
                 York, NY 535022
               </li>
-              <li>
-                <i class="fa-solid fa-envelope"></i> contact@example.com
-              </li>
+              <li><i class="fa-solid fa-envelope"></i> contact@example.com</li>
               <li><i class="fa-solid fa-phone"></i>+1 5589 55488 55</li>
             </ul>
           </div>
-
         </div>
       </div>
     </div>

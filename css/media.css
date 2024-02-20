@@ -1,0 +1,158 @@
+
+/* nav bar media query  */
+
+   
+   
+@media screen and (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+  
+  @media screen and (max-width: 1400px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 540px;
+      margin: 0 auto;
+
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      margin: 0 auto;
+
+      padding-inline: 15px;
+    }
+  }
+  /* *******************************  home media query*************************************** */
+    @media screen and (min-width: 1400px) {
+    
+   }
+   
+   @media screen and (max-width: 1400px) {
+    .home{
+      height: 100vh;
+    }
+   }
+   
+   @media screen and (max-width: 1200px) {
+   
+      .home .home-text{
+       width: 60%;
+      } .home .home-img{
+        width: 30%;
+      }
+     
+   }
+   
+   @media screen and (max-width: 992px) {
+    .home .home-content{
+      
+        flex-direction: column-reverse;
+    }
+    .home .home-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+       } 
+       .home .home-img{
+         width: 80%;
+       }
+   }
+   
+   @media screen and (max-width: 768px) {
+.container{
+  width: 100%;
+}
+
+   }
+
+   
+   @media screen and (max-width: 576px) {
+    .container{
+        width: 100%;
+        margin: 0 ;
+    }
+   .home{
+    height: 100vh;
+   }
+     .home .btns-group{
+        flex-direction: column;
+        align-items: center;
+    }
+    .home .home-content{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .home-text{
+      
+        text-align: center;
+        width: 100%;
+       } .home .home-img{
+        margin: 0;
+         width: 100%;
+       }
+   }
+   
+  @media screen and (max-width:1300px) {
+   
+  
+   .chefs .cards{
+   
+     flex-wrap: wrap;
+   }
+   .chefs .cards .card{
+     width: 40%;
+   }
+   
+   .gallery .gallery-imgs{
+   /* background-color: gold; */
+     justify-content: center;
+     align-items: center;
+     flex-wrap:wrap;
+     height: auto;
+   }
+   .gallery .gallery-imgs .picture{
+     width: 60%;
+   }
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
