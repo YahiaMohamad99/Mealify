@@ -5,12 +5,18 @@
   scroll-behavior: smooth;
 }
 :root {
+  --nav-bg:white;
+
   --main-light-bg: #eee;
   --border-radius: 25px;
   --color-primary: #e61414;
   --color-secondry:#ce1212;
   --section-padding: 40px;
   --gap: 10px;
+  --main-font-color:#37373f;
+  --second-font-color:#9f9f9f;
+  --third-font-color:#7f7f90;
+
 }
 body {
   font-family: "open sans";
@@ -34,17 +40,14 @@ li {
   list-style: none;
 }
 .container {
-  /* background-color: gold; */
   width: 80%;
   margin: 0 auto;
 }
-.section{
-  width: 100%;
-}
+/* ******************************************* NAV Styling ****************************************************/
 .nav {
   font-family: "open sans";
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--nav-bg);
   position: fixed;
   top: 0;
   right: 0;
@@ -58,7 +61,8 @@ li {
   align-items: center;
 }
 .nav .logo {
-  width: 30%;
+  color: var(--main-font-color);
+  width: 20%;
   position: relative;
 }
 .nav .logo h2::after {
@@ -71,45 +75,47 @@ li {
   border-radius: 50%;
 }
 .nav ul {
-  padding: 0;
-  width: 40%;
+
+  width: 25%;
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .nav ul li {
+
   position: relative;
   overflow: hidden;
   padding: 10px;
 }
-.nav  .fa-bars{
-  visibility: hidden;
-}
-.nav ul li .line {
+.nav ul li::after{
+  content: "";
+  position: absolute;
+  left: -100%;
+  background-color: var(--color-primary);
   width: 100%;
   height: 3px;
-  position: absolute;
-  bottom: 0;
-  left: -80px;
-  right: 0;
+  bottom:0;
   transition: all 0.5s;
 
-  background-color: var(--color-secondry);
 }
-.nav ul li:hover .line {
-  left: 0%;
-}
-.nav ul li:hover a {
-  color: #000;
-}
+.nav ul li:hover::after{
+  left: 0;
 
+
+}
+.nav ul li:hover a{ color: var(--main-font-color);
+  
+
+}
 .nav ul a {
-  color: #7f7f90;
+ color: var(--third-font-color);
   text-decoration: none;
 }
+
+
 
 .nav .nav-content .dark-mode {
   font-size: 30px;
@@ -127,20 +133,23 @@ li {
   color: #4f4f5a;
 }
 
-.nav .nav-content .dark-mode input:checked + .fa-moon {
-  display: none;
-}
-.nav .nav-content .dark-mode input:checked ~ .fa-sun {
-  color: #4f4f5a;
-  display: inline-block;
-}
 
-body:has(.home:target) .home-line.line ,
-body:has(.chefs:target) .chefs-line.line ,
-body:has(.gallery:target) .gallery-line.line ,
-body:has(.contact:target) .contact-line.line {
-  left: 0%;}
+
+body:has(#home:target) .nav ul li.home-line::after ,
+body:has(#chefs:target) .nav ul li.chefs-line::after ,
+body:has(.gallery:target) .nav ul li.gallery-line::after ,
+body:has(.contact:target) .nav ul li.contact-line::after {
+  left: 0;}
+body:has(#home:target) .nav ul li.home-line a  ,
+body:has(#chefs:target) .nav ul li.chefs-line a  ,
+body:has(.gallery:target) .nav ul li.gallery-line a  ,
+body:has(.contact:target) .nav ul li.contact-line a  {
+  color: var(--main-font-color);}
+
+  /* ******************************************* NAV Styling ****************************************************/
+
 .home {
+  color: var(--main-font-color);
   background-color: var(--main-light-bg);
   height: 100vh;
   display: flex;
@@ -157,11 +166,10 @@ body:has(.contact:target) .contact-line.line {
 .home-text {
   width: 50%;
   font-family: "open sans";
-  /* background-color: seagreen; */
+  color: var(--third-font-color);
 }
 
 .home .home-img {
-  /* background-color: gold; */
   margin: 20px 0;
   width: 40%;
   transition: all 0.5s;
@@ -185,13 +193,11 @@ body:has(.contact:target) .contact-line.line {
 }
 .home .home-text h1 {
   width: 70%;
-  color: #37373f;
+  color: var(--main-font-color);
   font-size: 65px;
   font-family: "Amatic SC", sans-serif;
 }
 .home .home-text p {
-  color: #4f4f5a;
-
   margin: 30px 0;
 }
 .home .home-text a {
@@ -227,7 +233,6 @@ body:has(.contact:target) .contact-line.line {
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  /* margin-right: 0.3125rem; */
   position: relative;
 }
 .home .vid-button .icon i {
@@ -240,12 +245,15 @@ body:has(.contact:target) .contact-line.line {
   height: 40px;
 }
 .home .home-text .table-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: center;
-  height: 50px;
+  /* height: 50px; */
   color: white;
-  padding: 10px 20px;
+  padding: 15px 10px;
   margin: 0 20px;
-  background-color: #ce1212;
+  background-color: var(--color-primary);
   border: 1px solid transparent;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
@@ -254,16 +262,18 @@ body:has(.contact:target) .contact-line.line {
 .home .home-text .table-button:hover {
   background-color: var(--color-primary);
 }
-/* Chefs Section Style  */
+/* ******************************************* chefs Styling ****************************************************/
+
 
 .sections-header {
+  color: var(--main-font-color);
   text-align: center;
   padding: 20px;
   font-family: "open sans";
 }
 .sections-header h3 {
   font-size: 16px;
-  color: #7f7f90;
+  color: var(--third-font-color);
 }
 
 .sections-header h2 {
@@ -280,19 +290,23 @@ body:has(.contact:target) .contact-line.line {
   /* margin: 80px 0; */
 }
 .chefs .cards {
+  /* background-color: tan; */
   font-family: "open sans";
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .chefs .cards .card {
+  width: calc(100% / 3);
   margin: 10px;
   text-align: center;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   transition: all 0.5s;
-  transform: scale(0.9, 0.9);
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+ 
 }
 .chefs .cards .card .brands {
   color: #212529;
@@ -314,11 +328,12 @@ body:has(.contact:target) .contact-line.line {
   right: 10px;
 }
 .chefs .cards .card:hover {
-  transform: scale(1, 1);
+  transform: scale(1.1, 1.1);
 }
 .chefs .card-text {
   padding: 10px;
 }
+/* ******************************************* Gallery Styling ****************************************************/
 
 .gallery {
   background-color: var(--main-light-bg);
@@ -346,8 +361,6 @@ body:has(.contact:target) .contact-line.line {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  z-index: 1;
   top: 100%;
   color: #fff;
   transition: all 0.5s;
@@ -364,6 +377,7 @@ body:has(.contact:target) .contact-line.line {
 .gallery .picture:hover img {
   transform: scale(1.1, 1.1);
 }
+/* ******************************************* Contacts Styling ****************************************************/
 
 .contact {
   padding: var(--section-padding);
@@ -446,20 +460,19 @@ body:has(.contact:target) .contact-line.line {
 }
 .contact input:focus,
 .contact textarea:focus {
-  border: 2px solid #ce1212;
+  border: 2px solid var(--color-primary);
   outline: none;
 }
+/* ******************************************* Footer Styling ****************************************************/
 
 .footer {
   background-image: linear-gradient(#0009, #0009),
     url(https://alfaroukroute.github.io/Mealify/assets/img/textured-metal-background.jpg);
-  /* background-position: center; */
   background-size: contain;
   color: white;
   padding: var(--section-padding);
 }
 .footer .footer-content {
-  /* background-color: tomato; */
   display: flex;
   justify-content: space-between;
 }
