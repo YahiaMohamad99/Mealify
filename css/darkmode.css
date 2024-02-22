@@ -13,14 +13,20 @@
   --color-default: #212529;
 }
 
-.nav .nav-content .dark-mode input:checked + .fa-moon {
+nav  .dark-mode input:checked + .fa-moon {
     display: none;
   }
-  .nav .nav-content .dark-mode input:checked ~ .fa-sun {
+  nav  .dark-mode input:checked ~ .fa-sun {
     color: var(--main-font-color);
     display: inline-block;
   }
 
+  body:has(#dark-mode:checked):has(#nav-links:target) nav  {
+    background-color: #171717b2;
+  
+}
+
+/*  ********************************* Home Colors ************************** */
   body:has(#dark-mode:checked) .home .home-text .vid-button {
     
     color:var(--main-font-color);
@@ -34,9 +40,13 @@ color: var(--color-primary);  }
   body:has(#dark-mode:checked) .home .home-text .table-button {
     color: #171717;
   }
-  body:has(#dark-mode:checked) .home .home-text .vid-button i{
-    background-color: #171717;
+  body:has(#dark-mode:checked) .home .icon::after{
+    background-color: var(--nav-bg);
   }
+  
+
+  /*  ********************************* Chefs Colors ************************** */
+
   
 body:has(#dark-mode:checked) .chefs .card { 
   background-color: var(--nav-bg);

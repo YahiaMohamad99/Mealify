@@ -21,13 +21,22 @@
   <body>
     <!-- ******************** Nav  Section *****************************************-->
 
-    <div class="nav">
+    <nav>
       <div class="container">
-        <div class="nav-content">
+       
+
+          <!-- Logo  -->
           <div class="logo">
-            <h2>Mealify</h2>
+            <a href="index.html"><h2>Mealify</h2></a>
           </div>
-          <ul>
+
+
+          <!-- Links -->
+          <ul class="nav-links" id="nav-links">
+             <li class="close">      
+        <a  href="index.html">
+        <i class="fa-solid fa-xmark"></i></a>
+      </li>
             <li class="home-line">
               <a href="#home">Home</a>
             </li>
@@ -43,28 +52,31 @@
           
           </ul>
        
-
+          <!-- Dark Mode -->
           <div class="dark-mode">
             <label for="dark-mode">
               <input type="checkbox" id="dark-mode" />
-              <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i
-            ></label>
+              <i class="fa-solid fa-moon"></i> 
+              <i class="fa-solid fa-sun"></i>
+            </label>
+            <a href="#nav-links">
+            <i class="fa-solid fa-bars"></i>
+          </a>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- ******************** Home Section *****************************************-->
 
-    <div class="home" id="home">
+    
+      </div>
+    </nav>
+    <!-- ******************** Home Section *****************************************-->
+ <header class="home section-bg-color" id="home">
       <div class="container">
-        <div class="home-content">
+       
           <div class="home-text">
             <h1>Enjoy Your Healthy Delicious Food</h1>
             <p>
               Sed autem laudantium dolores. Voluptatem itaque ea consequatur
               eveniet. Eum quas beatae cumque eum quaerat.
             </p>
-
             <div class="btns-group">
               <a class="table-button" href="">Book a Table</a>
               <a
@@ -80,9 +92,10 @@
           <div class="home-img">
             <img src="../img/home-img.png" alt="meal picture" />
           </div>
-        </div>
+      
       </div>
-    </div>
+    </header>
+ 
     <!-- ******************** Chefs Section *****************************************-->
 
     <div class="chefs " id="chefs">
@@ -162,14 +175,14 @@
         </div>
 
         <div class="gallery-imgs">
-          <div class="picture">
+          <picture class="pizza">
             <img src="../img/meal-1.jpg" alt="" />
             <div class="meal-layer">
               <h2>Pizaa</h2>
               <p>Hawaiian pizza with ham and pineapple</p>
             </div>
-          </div>
-          <div class="picture">
+          </picture>
+          <picture class="pizza-slice">
             <img src="../img/meal-4.jpg" alt="" />
             <div class="meal-layer">
               <h2>Beef steaks</h2>
@@ -177,16 +190,16 @@
                 Tasty beef steaks flying above cast iron grate with fire flames.
               </p>
             </div>
-          </div>
+          </picture>
 
-          <div class="picture">
+          <picture class="meat">
             <img src="../img/meal-2.jpg" alt="" />
             <div class="meal-layer">
               <h2>Levitation pizza</h2>
               <p>Levitation pizza on black background.</p>
             </div>
-          </div>
-          <div class="picture">
+          </picture>
+          <picture class="chease">
             <img src="../img/meal-7.jpg" alt="" />
             <div class="meal-layer">
               <h2>Crispy Fried Chicken</h2>
@@ -194,15 +207,15 @@
                 Golden brown chicken legs with a crunchy coating and juicy meat
               </p>
             </div>
-          </div>
-          <div class="picture">
+          </picture>
+          <picture class="burger">
             <img src="../img/meal-3.jpg" alt="" />
             <div class="meal-layer">
               <h2>Frittata</h2>
               <p>Frittata or potato pie in a ceramic plate</p>
             </div>
-          </div>
-          <div class="picture">
+          </picture>
+          <picture class="cheaken">
             <img src="../img/meal-5.jpg" alt="" />
             <div class="meal-layer">
               <h2>Lyulya kebab</h2>
@@ -211,14 +224,14 @@
                 aromatic spices and herbs
               </p>
             </div>
-          </div>
-          <div class="picture">
+          </picture>
+          <picture class="kofta">
             <img src="../img/meal-6.jpg" alt="" />
             <div class="meal-layer">
               <h2>Frittata</h2>
               <p>Frittata or potato pie in a ceramic plate</p>
             </div>
-          </div>
+          </picture>
         </div>
       </div>
     </div>
@@ -349,5 +362,7 @@
         </div>
       </div>
     </div>
+
+    
   </body>
 </html>
