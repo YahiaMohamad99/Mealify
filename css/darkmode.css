@@ -1,0 +1,81 @@
+:root:has(#dark-mode:checked){
+    
+    --nav-bg:#171717;
+  --main-light-bg: #252525;
+  --border-radius: 25px;
+  --color-primary: #C17E1F;
+  --color-secondry: #0048c4;
+  --section-padding: 40px;
+  --gap: 10px;
+  --main-font-color:white;
+  --second-font-color:#7f7f90;
+    --third-font-color:#9f9f9f;
+  --color-default: #212529;
+}
+
+nav  .dark-mode input:checked + .fa-moon {
+    display: none;
+  }
+  nav  .dark-mode input:checked ~ .fa-sun {
+    color: var(--main-font-color);
+    display: inline-block;
+  }
+
+  body:has(#dark-mode:checked):has(#nav-links:target) nav  {
+    background-color: #171717b2;
+  
+}
+
+/*  ********************************* Home Colors ************************** */
+  body:has(#dark-mode:checked) .home .home-text .vid-button {
+    
+    color:var(--main-font-color);
+
+  }
+  
+  body:has(#dark-mode:checked) .home .home-text .vid-button:hover {
+    
+color: var(--color-primary);  }
+  
+  body:has(#dark-mode:checked) .home .home-text .table-button {
+    color: #171717;
+  }
+  body:has(#dark-mode:checked) .home .icon::after{
+    background-color: var(--nav-bg);
+  }
+  
+
+  /*  ********************************* Chefs Colors ************************** */
+
+  
+body:has(#dark-mode:checked) .chefs .card { 
+  background-color: var(--nav-bg);
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+body:has(#dark-mode:checked) .chefs .card h3{
+color: var(--main-font-color);
+}
+body:has(#dark-mode:checked) .chefs .card {
+color: var(--third-font-color);
+}
+body:has(#dark-mode:checked){
+    background-color: #292929;
+}
+
+body:has(#dark-mode:checked) .contact .contact-record h3{
+    color: #ADADAD;
+}
+body:has(#dark-mode:checked) .contact .contact-record p{
+    color: #FFFF;
+}
+body:has(#dark-mode:checked) .contact input:focus,
+.contact textarea:focus {
+  border: 2px solid var(--color-primary);
+  outline: none;  
+}
+  
+
+
+
+
+
